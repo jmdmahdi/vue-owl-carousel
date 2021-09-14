@@ -234,6 +234,9 @@ export default {
   },
 
   mounted: function() {
+	
+	console.log("Owl carousel mounted");
+  
     const owl = $('#' + this.elementHandle).owlCarousel({
       items: this.items,
       margin: this.margin,
