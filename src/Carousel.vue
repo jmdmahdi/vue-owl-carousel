@@ -245,7 +245,7 @@ export default {
         this.$emit(eventName, event);
       });
     });
-	this.nextTick(function () {
+	this.$nextTick(function () {
 		owl.owlCarousel({
 		  items: this.items,
 		  margin: this.margin,
