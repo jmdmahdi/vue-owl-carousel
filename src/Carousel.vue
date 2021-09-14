@@ -235,16 +235,15 @@ export default {
 
   mounted: function() {
 	
-	console.log("Owl carousel mounted");
   
     const owl = $('#' + this.elementHandle);
 	
 	events.forEach((eventName) => {
       owl.on(`${eventName}.owl.carousel`, (event) => {
-	  console.log("Owl", eventName, event);
         this.$emit(eventName, event);
       });
     });
+	
 	this.$nextTick(function () {
 		setTimeout(function(){ 
 			owl.owlCarousel({
