@@ -300,6 +300,7 @@ export default {
 
     events.forEach((eventName) => {
       owl.on(`${eventName}.owl.carousel`, (event) => {
+	  console.log("Owl", eventName, event);
         this.$emit(eventName, event);
       });
     });
