@@ -1,14 +1,10 @@
 <template>
   <div>
-    <span :class="{disabled:showPrev}" :id="prevHandler">
-      <slot name="prev" />
-    </span>
+    <span class="slider-prev-button" :id="prevHandler"></span>
     <div :id="elementHandle" :class="['owl-carousel', 'owl-theme']">
       <slot />
     </div>
-    <span :class="{disabled:showNext}" :id="nextHandler">
-      <slot name="next" />
-    </span>
+    <span class="slider-next-button" :id="nextHandler"></span>
   </div>
 </template>
 <script>
