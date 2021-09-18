@@ -1,10 +1,10 @@
 <template>
   <div>
-    <span class="slider-prev-button" :id="prevHandler"></span>
+    <span v-if="nav" class="slider-prev-button" :id="prevHandler"></span>
     <div :id="elementHandle" :class="['owl-carousel', 'owl-theme']">
       <slot />
     </div>
-    <span class="slider-next-button" :id="nextHandler"></span>
+    <span v-if="nav" class="slider-next-button" :id="nextHandler"></span>
   </div>
 </template>
 <script>
