@@ -1,12 +1,12 @@
 <template>
   <div>
-    <span v-show="showPrev" :id="prevHandler">
+    <span :class="{disabled:showPrev}" :id="prevHandler">
       <slot name="prev" />
     </span>
     <div :id="elementHandle" :class="['owl-carousel', 'owl-theme']">
       <slot />
     </div>
-    <span v-show="showNext" :id="nextHandler">
+    <span :class="{disabled:showNext}" :id="nextHandler">
       <slot name="next" />
     </span>
   </div>
